@@ -1,0 +1,105 @@
+#Main {
+  background: url("../../../assets/images/Main_image.png") no-repeat
+    center/cover;
+  .Main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 73vh;
+    gap: 30px;
+    position: relative;
+    .Main_icon {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h2 {
+        font-size: 40px;
+        font-weight: 400;
+        color: #ffffff;
+        font-family: "Shalimar", cursive;
+      }
+    }
+    h1 {
+      font-size: 64px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+    p {
+      width: 516px;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 17.92px;
+      text-align: center;
+      color: #ffffff;
+    }
+    .Main_buttons {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      button {
+        width: 220px;
+        height: 42px;
+        border: 1.6px solid #ef272c;
+        background: transparent;
+        border-radius: 2px;
+        font-size: 16px;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+  }
+  .Main_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Main_left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h2 {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.54);
+      }
+    }
+    .Main_right {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h2 {
+        font-size: 14px;
+        font-weight: 600;
+        color: white;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.523);
+      }
+    }
+  }
+  .Main_line {
+    width: 100%;
+    border: 0.2px solid grey;
+    margin: 20px 0;
+  }
+  .Main_line1 {
+    height: 340px;
+    background: grey;
+    width: 1px;
+    position: absolute;
+    top: 43%;
+  }
+}

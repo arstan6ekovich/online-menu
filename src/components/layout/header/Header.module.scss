@@ -1,0 +1,48 @@
+#Header {
+  padding: 10px 0;
+  .Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .Header_nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 500px;
+      a {
+        font-size: 16px;
+        color: #ffffff;
+        font-weight: 500;
+      }
+    }
+    .Header_buttons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 300px;
+      button {
+        width: 187px;
+        height: 37px;
+        border-radius: 8px;
+        background: #ef272c;
+        border: 0.8px solid #5609bb33;
+        border: none;
+        color: #ffffff;
+        font-size: 17px;
+        font-weight: 400;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        gap: 10px;
+      }
+      select {
+        border: none;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+        outline: none;
+      }
+    }
+  }
+}
