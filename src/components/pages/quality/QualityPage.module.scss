@@ -1,0 +1,120 @@
+#Quality {
+  padding: 100px 0;
+  .Quality_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .Quality_image {
+      display: flex;
+      align-items: center;
+      width: 300px;
+      h1 {
+        font-family: "Shalimar", cursive;
+        font-size: 30px;
+        font-weight: 400;
+        color: white;
+      }
+    }
+    h1 {
+      font-family: Silk Serif;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 61.36px;
+      color: #ffffff;
+      width: 395px;
+      text-align: center;
+    }
+  }
+  .Quality {
+    padding: 50px 0;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    .Quality_left {
+      text-align: center;
+      width: 363px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      background: #1f2731;
+      padding: 30px 0;
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 36.82px;
+        width: 363px;
+        cursor: pointer;
+        height: 66px;
+      }
+    }
+
+    .Qualtiy_mar4ik {
+      display: flex;
+      flex-direction: column;
+      height: 800px;
+      justify-content: space-between;
+      .Quality_right {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: relative;
+        gap: 20px;
+        .Quality_main {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          h3 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
+          }
+          h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ef272c;
+          }
+        }
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          color: grey;
+          width: 512px;
+        }
+        a {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          font-size: 16px;
+          color: #ffffff;
+          font-weight: 600;
+          border-bottom: 1px solid white;
+        }
+      }
+    }
+  }
+  .Main_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    button {
+      width: 220px;
+      height: 42px;
+      border: 1.6px solid #ef272c;
+      background: transparent;
+      border-radius: 2px;
+      font-size: 16px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-content: center;
+      font-weight: 600;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+  }
+}

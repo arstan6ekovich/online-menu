@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
   padding: 20px 0;
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+
+.containers {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
