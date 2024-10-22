@@ -1,19 +1,23 @@
 #InteriorPage {
   padding: 100px 0;
+
   .InteriorPage {
     display: flex;
     align-items: center;
     justify-content: center;
+
     .InteriorPage_image {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 20px;
+
       img {
         border-radius: 15px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
         transition: transform 0.3s ease-in-out;
+
         &:hover {
           transform: scale(1.05);
         }
@@ -21,10 +25,41 @@
     }
 
     img {
-    //   max-width: 100%;
       height: auto;
       border-radius: 15px;
       box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  @media (max-width: 380px) {
+    padding: 50px 0;
+    display: flex;
+
+    .InteriorPage {
+    display: flex;
+      flex-direction: column; 
+
+      .InteriorPage_image {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: scroll; 
+        gap: 10px;
+
+        img {
+          width: 100%;
+          max-width: none;
+          flex-shrink: 0; 
+        }
+
+        img:nth-child(2) {
+          margin: 0 auto; 
+        }
+      }
+
+      img {
+        max-width: none;
+        width: 100%; 
+      }
     }
   }
 }

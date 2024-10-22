@@ -3,17 +3,20 @@
   display: flex;
   justify-content: space-between;
   align-items: start;
+
   .visit_text {
     gap: 20px;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+
     .Main_buttons {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 10px;
+
       button {
         position: relative;
         width: 220px;
@@ -30,12 +33,19 @@
         font-weight: 600;
         cursor: pointer;
         text-transform: uppercase;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: rgba(239, 39, 44, 0.1);
+        }
       }
     }
+
     .visit_restarant {
       display: flex;
       align-items: center;
       gap: 10px;
+
       h2 {
         color: #ffffff;
         font-family: "Shalimar", cursive;
@@ -47,8 +57,7 @@
 
     h1 {
       color: #ffffff;
-      width: 238px;
-      height: 122px;
+      width: 100%; // Изменено для адаптации
       font-size: 40px;
       font-weight: 600;
       line-height: 61.36px;
@@ -60,33 +69,30 @@
         font-weight: 500;
         line-height: 24px;
         text-align: left;
-        width: 330px;
-        height: 24px;
-        gap: 0px;
-        opacity: 0px;
+        width: 100%; // Изменено для адаптации
         color: #ef272c;
+        padding-top: 30px;
         padding-bottom: 20px;
       }
+
       h3 {
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
-        width: 330px;
-        height: 48px;
         color: #ffffff;
       }
     }
+
     .visit_button {
       h1 {
         font-family: Spartan;
         font-size: 12px;
         font-weight: 600;
         line-height: 13.44px;
-        width: 147px;
-        height: 13px;
       }
     }
   }
+
   .visit_image {
     display: flex;
     flex-direction: column;
@@ -107,11 +113,43 @@
       align-items: center;
       gap: 10px;
     }
+
     .telegram {
       display: flex;
       gap: 10px;
+
       h1 {
         font-size: 40px;
+      }
+    }
+  }
+
+  
+   
+
+  @media (max-width: 380px) {
+    // padding: 20px; 
+    flex-direction: column;
+    gap: 50px;
+
+    .visit {
+      flex-direction: column; 
+      align-items: center; 
+    }
+
+    .visit_text {
+      align-items: center; 
+      h1 {
+        font-size: 28px; 
+        text-align: center; 
+      }
+    }
+
+    .visit_image {
+      width: 80%;
+      padding: 30px; 
+      h1 {
+        font-size: 18px; 
       }
     }
   }
