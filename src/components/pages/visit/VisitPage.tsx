@@ -56,7 +56,7 @@ const Visit = () => {
             </div>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d477.16048450867737!2d74.61237025479795!3d42.889812057316234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2skg!4v1729328939461!5m2!1sru!2skg"
-              width="600"
+              width="100%"
               height="250"
               loading="lazy"
             ></iframe>

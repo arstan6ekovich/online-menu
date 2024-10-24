@@ -12,9 +12,9 @@ const InteriorPage = () => {
       <div className={scss.InteriorPage}>
         <Image src={InteriorPage_image1} alt="InteriorPage_image1" />
         <div className={scss.InteriorPage_image}>
-          <Image src={image1} alt="image1" />
-          <Image src={image2} alt="image2" />
-          <Image src={image3} alt="image3" />
+          <Image src={image1} alt="image1" className={scss.image} />
+          <Image src={image2} alt="image2" className={scss.image} />
+          <Image src={image3} alt="image3" className={scss.image} />
         </div>
         <Image src={InteriorPage_image2} alt="InteriorPage_image2" />
       </div>
