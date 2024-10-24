@@ -9,6 +9,14 @@
       align-items: center;
       gap: 20px;
       transform: rotate();
+
+      .gallery {
+        width: 100%;
+        max-width: 570px;
+        display: flex;
+        gap: 20px;
+        overflow: scroll;
+      }
     }
     .Reverse_text {
       display: flex;
@@ -43,4 +51,270 @@
       }
     }
   }
+}
+
+@media (max-width: 1090px) {
+  #Reverse {
+    padding: 70px 0;
+    .Reverse {
+      .Reverse_image {
+        gap: 15px;
+        .gallery {
+          max-width: 460px;
+            img {
+
+              width: 230px;
+            }
+
+        }
+        img {
+
+          // &:nth-child(2) {
+
+          //   width: 230px;
+          // }
+          // &:nth-child(3) {
+
+          //   width: 230px;
+          // }
+        }
+      }
+      .Reverse_text {
+        gap: 30px;
+        .Reverse_about {
+          gap: 20px;
+          h2 {
+            font-size: 27px;
+          }
+        }
+        h1 {
+          width: 100%;
+          max-width: 320px;
+          font-size: 35px;
+        }
+        p {
+          width: 100%;
+          max-width: 447px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 834px) {
+  #Reverse {
+    padding: 40px 0;
+    .Reverse {
+      .Reverse_image {
+        gap: 15px;
+        .gallery {
+        max-width: 360px;
+          img {
+            width: 180px       
+          }
+        }
+        img {
+          width: 20px;
+          // &:nth-child(2) {
+
+          //   width: 180px;
+          // }
+          // &:nth-child(3) {
+
+          //   width: 180px;
+          // }
+        }
+      }
+      .Reverse_text {
+        gap: 20px;
+        .Reverse_about {
+          gap: 10px;
+          img {
+            width: 40px;
+          }
+          h2 {
+            font-size: 24px;
+          }
+        }
+        h1 {
+          max-width: 250px;
+          font-size: 30px;
+          line-height: 40px;
+        }
+        p {
+          max-width: 290px;
+          font-size: 13px;
+          line-height: 15px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@media (max-width: 700px) {
+  #Reverse {
+    padding: 20px 0;
+    .Reverse {
+      flex-direction: column;
+      justify-content: start;
+      .Reverse_image {
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+        .gallery {
+          max-width: 500px;
+          img{
+            width: 250px;
+          }
+        }
+        img {
+          width: 24px;
+          // &:nth-child(2) {
+          //   // width: 100%;
+          //   width: 250px;
+          // }
+          // &:nth-child(3) {
+          //   // width: 100%;
+          //   width: 250px;
+          // }
+        }
+
+      }
+      .Reverse_text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 30px;
+        .Reverse_about {
+          align-items: center;
+          gap: 30px;
+          h2 {
+            font-size: 30px;
+          }
+        }
+        h1 {
+          max-width: 515px;
+          font-size: 40px;
+          line-height: 61.36px;
+        }
+        p {
+          max-width: 447px;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  
+}
+@media (max-width: 600px) {
+  #Reverse {
+    padding: 20px 0;
+    .Reverse {
+      .Reverse_image {
+
+        .gallery {
+          max-width: 400px;
+          img {
+            width: 200px;
+          }
+        }
+        img {
+          width: 20px;
+          // &:nth-child(2) {
+          //   // width: 100%;
+          //   width: 200px;
+          // }
+          // &:nth-child(3) {
+          //   // width: 100%;
+          //   width: 200px;
+          // }
+        }
+
+      }
+      .Reverse_text {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+        // width: 100%;
+        .Reverse_about {
+          gap: 10px;
+          img {
+            width: 30px;
+          }
+          h2 {
+            font-family: "Shalimar", cursive;
+            font-size: 25px;
+          }
+        }
+        h1 {
+          max-width: 400px;
+          font-size: 33px;
+          line-height: 50.36px;
+        }
+        p {
+          max-width: 415px;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          color: grey;
+        }
+      }
+    }
+  }
+  
+}
+@media (max-width: 480px) {
+  #Reverse {
+    padding: 20px 0 0 20px;
+    .Reverse {
+      align-items: start;
+      .Reverse_image {
+        border-left: 1px solid #BBBBBB;
+        margin-top: 20px;
+        height: auto;
+        width: 100%;
+        max-width: 440px;
+        overflow: scroll;
+        img {
+          width: 20px;
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      .Reverse_text {
+        gap: 20px;
+        .Reverse_about {
+          gap: 10px;
+          img {
+            width: 25px;
+          }
+          h2 {
+            font-size: 20px;
+          }
+        }
+        h1 {
+          max-width: 400px;
+          font-size: 28px;
+          line-height: 40.36px;
+        }
+        p {
+          max-width: 415px;
+          font-size: 12px;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+  
 }
