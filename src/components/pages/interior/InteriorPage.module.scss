@@ -34,31 +34,31 @@
   @media (max-width: 380px) {
     padding: 50px 0;
     display: flex;
-
+    align-items: center;
     .InteriorPage {
-    display: flex;
-      flex-direction: column; 
+      display: flex;
+      flex-direction: column;
 
       .InteriorPage_image {
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: scroll; 
+        overflow-x: scroll;
         gap: 10px;
 
         img {
           width: 100%;
           max-width: none;
-          flex-shrink: 0; 
+          flex-shrink: 0;
         }
 
         img:nth-child(2) {
-          margin: 0 auto; 
+          margin: 0 auto;
         }
       }
 
       img {
         max-width: none;
-        width: 100%; 
+        width: 100%;
       }
     }
   }

@@ -127,7 +127,7 @@
   
    
 
-  @media (max-width: 380px) {
+  @media (max-width: 414) {
     // padding: 20px; 
     flex-direction: column;
     gap: 50px;
@@ -138,7 +138,6 @@
     }
 
     .visit_text {
-      align-items: center; 
       h1 {
         font-size: 28px; 
         text-align: center; 
