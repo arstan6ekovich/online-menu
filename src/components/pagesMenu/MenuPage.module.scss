@@ -5,17 +5,41 @@
   max-width: 1200px;
   margin: 0 auto;
   color: #fff;
+
+  @media (max-width: 380px) {
+    flex-direction: column;
+    gap: 20px;
+  }
 }
 
 .sidebar {
   width: 20%;
   background-color: #1e2125;
   padding: 20px;
+
+  @media (max-width: 380px) {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 .categoryList {
   list-style: none;
-  padding: 0;
+  padding: 0px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  scrollbar-width: none;
+
+  @media (max-width: 380px) {
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 .categoryItem {
@@ -33,6 +57,17 @@
     background-color: #ff3b3b;
     color: white;
   }
+
+  @media (max-width: 380px) {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    width: 175px;
+    gap: 10px;
+
+    white-space: nowrap;
+  }
 }
 
 .activeCategory {
@@ -46,6 +81,12 @@
   gap: 20px;
   width: 80%;
   padding: 30px;
+
+  @media (max-width: 380px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 .itemCard {
@@ -57,10 +98,21 @@
   &:hover {
     transform: translateY(-5px);
   }
+  @media (max-width: 380px) {
+    display: flex;
+  background-color: #1e2130;
+    width: Fixed (335px) px;
+    height: Hug (80px) px;
+    gap: 12px;
+    opacity: 0px;
+  }
 
   .itemImage {
     width: 100%;
     object-fit: cover;
+    @media (max-width: 380px) {
+      width: 120px;
+    }
   }
 
   .itemDetails {
@@ -69,20 +121,54 @@
     display: flex;
     justify-content: space-between;
 
+    @media (max-width: 380px) {
+      flex-direction: column;
+      align-items: start;
+      gap: 10px;
+    }
     h3 {
       font-size: 20px;
       color: #000000;
+
+      @media (max-width: 380px) {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 17.92px;
+        text-align: left;
+      color:white;
+
+      }
     }
 
     p {
       font-size: 14px;
       color: #000000;
+
+      @media (max-width: 380px) {
+        font-family: sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 15.68px;
+        letter-spacing: 0.07em;
+        text-align: left;
+      color:white;
+
+      }
     }
 
     .itemPrice {
       font-size: 18px;
       font-weight: bold;
       color: #ff3b3b;
+
+      @media (max-width: 380px) {
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 17.92px;
+        text-align: left;
+      }
     }
   }
 }

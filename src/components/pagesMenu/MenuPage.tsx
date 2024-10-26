@@ -128,38 +128,44 @@ const Menu = () => {
   };
 
   return (
-    <div className={scss.menuContainer}>
-      <div className={scss.sidebar}>
-        <ul className={scss.categoryList}>
-          {categories.map((category) => (
-            <li
-              key={category}
-              className={`${scss.categoryItem} ${
-                category === selectedCategory ? scss.activeCategory : ""
-              }`}
-              onClick={() => handleCategoryClick(category)}
-            >
-              {category}
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="container">
+      <div className={scss.menuContainer}>
+        <div className={scss.sidebar}>
+          <ul className={scss.categoryList}>
+            {categories.map((category) => (
+              <li
+                key={category}
+                className={`${scss.categoryItem} ${
+                  category === selectedCategory ? scss.activeCategory : ""
+                }`}
+                onClick={() => handleCategoryClick(category)}
+              >
+                {category}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <div className={scss.itemsContainer}>
-        {allItems[selectedCategory].map((item, index) => (
-          <div key={index} className={scss.itemCard}>
-            <img src={item.image} alt={item.name} className={scss.itemImage} />
-            <div className={scss.itemDetails}>
-              <div className={scss.itemH}>
-                <h3>{item.name}</h3>
-                <p>{item.ingredients}</p>
-              </div>
-              <div className={scss.itemSpam}>
-                <span className={scss.itemPrice}>{item.price}</span>
+        <div className={scss.itemsContainer}>
+          {allItems[selectedCategory].map((item, index) => (
+            <div key={index} className={scss.itemCard}>
+              <img
+                src={item.image}
+                alt={item.name}
+                className={scss.itemImage}
+              />
+              <div className={scss.itemDetails}>
+                <div className={scss.itemH}>
+                  <h3>{item.name}</h3>
+                  <p>{item.ingredients}</p>
+                </div>
+                <div className={scss.itemSpam}>
+                  <span className={scss.itemPrice}>{item.price}</span>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
