@@ -1,0 +1,12 @@
+{
+  "main": {
+    "delicious": "Delicious",
+    "cuisine": "Italian Cuisine",
+    "description": "Classic steak & delicious with delightfully unexpected twists. The Restaurant's sunny decor was inspired by the diners.",
+    "reserve_button": "Reserve Your Table",
+    "location": "Location",
+    "address": "Rua da moeda 1g,1200-275,Portugal",
+    "hotline": "Hotline",
+    "phone": "+771219900"
+  }
+}

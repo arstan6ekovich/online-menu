@@ -11,11 +11,11 @@ const MenuPage = () => {
         <div className={scss.Menu}>
           <div className={scss.Menu_left}>
             <div className={scss.Menu_text}>
-              <Image src={menu_image} alt="menu_image" />
+              <Image src={menu_image} alt="Menu Image" width={500} height={300} />
               <h2>About Us</h2>
             </div>
-            <h1>A Journey Throught Cafesio Flavors</h1>
-            <Image src={menu_left} alt="menu_left" />
+            <h1>A Journey Through Cafesio Flavors</h1>
+            <Image src={menu_left} alt="Menu Left" width={500} height={300} />
           </div>
           <div className={scss.Menu_right}>
             <p>
@@ -24,7 +24,7 @@ const MenuPage = () => {
               excellent service and attention to each guest. Book a table now
               and enjoy a unique experience of taste discovery!
             </p>
-            <Image src={menu_right} alt="menu_right" />
+            <Image src={menu_right} alt="Menu Right" width={500} height={300} />
           </div>
         </div>
       </div>

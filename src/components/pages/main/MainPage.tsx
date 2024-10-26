@@ -1,4 +1,3 @@
-import scss from "./MainPage.module.scss";
 import icon from "@/assets/images/main_icon.svg";
 import icon1 from "@/assets/images/main_icon2.svg";
 import line_1 from "@/assets/images/line_1.svg";
@@ -8,6 +7,7 @@ import maps from "@/assets/images/maps.svg";
 import telfon from "@/assets/images/tel.svg";
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
+import scss from "./MainPage.module.scss";
 
 const MainPage = () => {
   return (
@@ -22,7 +22,7 @@ const MainPage = () => {
           <h1>Italian Cuisine</h1>
           <p>
             Classic steak & delicious with delightfully unexpenced twists. The
-            Restaurant`s sunny decor was inspired by the diners
+            Restaurants sunny decor was inspired by the diners
           </p>
           <div className={scss.Main_buttons}>
             <Image src={line_1} alt="line-1" />

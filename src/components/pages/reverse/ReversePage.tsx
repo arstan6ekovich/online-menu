@@ -6,9 +6,11 @@ import reverse_image1 from "@/assets/images/reverse_imaage1.svg";
 import reverse_image2 from "@/assets/images/reverse_imag2.svg";
 import reverse_image_prev from "@/assets/images/reverse_image_prev.svg";
 import { useRef, useState } from "react";
+
 const ReversePage = () => {
   const [reverse, setReverse] = useState(false);
-  const scrollGallery = useRef(null)
+  const scrollGallery = useRef<HTMLDivElement>(null);
+
   const scrollRight = () => {
     if (scrollGallery.current) {
       scrollGallery.current.scrollBy({
@@ -17,8 +19,9 @@ const ReversePage = () => {
         behavior: "smooth",
       });
     }
-    setReverse(true)
-  }
+    setReverse(true); // Using reverse state here if needed later
+  };
+
   const scrollLeft = () => {
     if (scrollGallery.current) {
       scrollGallery.current.scrollBy({
@@ -27,7 +30,8 @@ const ReversePage = () => {
         behavior: "smooth", 
       });
     }
-  }
+    setReverse(false); // Set reverse state accordingly
+  };
 
   return (
     <section id={scss.Reverse}>
@@ -47,25 +51,23 @@ const ReversePage = () => {
           <div className={scss.Reverse_image}>
             <Image
               style={{
-                transform: "rotate(180deg)",
-                // display: !reverse ? "none" : "flex",
-                // transform: reverse ? "rotate(180deg)" : "rotate(0deg)",
+                transform: reverse ? "rotate(180deg)" : "rotate(0deg)", // Use reverse state
               }}
               onClick={() => scrollLeft()}
               src={reverse_image_prev}
-              alt="reverse_image1"
+              alt="reverse_image_prev"
             />
             <div className={scss.gallery} ref={scrollGallery}>
               <Image src={reverse_image1} alt="reverse_image1" />
-              <Image src={reverse_image2} alt="reverse_image1" />
-              <Image src={reverse_image2} alt="reverse_image1" />
-              <Image src={reverse_image2} alt="reverse_image1" />
+              <Image src={reverse_image2} alt="reverse_image2" />
+              <Image src={reverse_image2} alt="reverse_image3" />
+              <Image src={reverse_image2} alt="reverse_image4" />
             </div>
             
             <Image
               onClick={() => scrollRight()}
               src={reverse_image_prev}
-              alt="reverse_image1"
+              alt="reverse_image_next"
             />
           </div>
         </div>

@@ -9,7 +9,6 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
   const navbar = [
     {
       id: 1,
@@ -20,7 +19,7 @@ const Header = () => {
       id: 2,
       href: "/about",
       name: "About Us",
-    },
+    }, 
     {
       id: 3,
       href: "/menu",
