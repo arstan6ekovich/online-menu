@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import scss from "./MenuPage.module.scss";
 import menu_image from "@/assets/images/main_icon.svg";

@@ -1,4 +1,3 @@
-// Header.tsx
 "use client";
 import Image from "next/image";
 import scss from "./Header.module.scss";
@@ -6,7 +5,7 @@ import header_logo from "@/assets/images/header-logo.svg";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter } from "next/navigation"; // Этот импорт оставляем, если он будет использован позже
 import { useLanguageStore } from "@/stores/zustand";
 
 const Header = () => {
@@ -14,7 +13,8 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { language, setLanguage, t } = useLanguageStore();
 
-  const route = useRouter();
+  // Удаляем неиспользуемую переменную route
+  // const route = useRouter(); 
 
   const navbar = [
     { id: 1, href: "/", name: t("Интерьер", "Interior", "Интерьер") },
