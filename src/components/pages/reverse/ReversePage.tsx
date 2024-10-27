@@ -6,31 +6,33 @@ import reverse_image1 from "@/assets/images/reverse_imaage1.svg";
 import reverse_image2 from "@/assets/images/reverse_imag2.svg";
 import reverse_image_prev from "@/assets/images/reverse_image_prev.svg";
 import { useRef, useState } from "react";
+import { useLanguageStore } from "@/stores/zustand";
 
 const ReversePage = () => {
   const [reverse, setReverse] = useState(false);
   const scrollGallery = useRef<HTMLDivElement>(null);
+  const { t } = useLanguageStore();
 
   const scrollRight = () => {
     if (scrollGallery.current) {
       scrollGallery.current.scrollBy({
         top: 0,
-        left: 300, 
+        left: 300,
         behavior: "smooth",
       });
     }
-    setReverse(true); // Using reverse state here if needed later
+    setReverse(true);
   };
 
   const scrollLeft = () => {
     if (scrollGallery.current) {
       scrollGallery.current.scrollBy({
         top: 0,
-        left: -300, 
-        behavior: "smooth", 
+        left: -300,
+        behavior: "smooth",
       });
     }
-    setReverse(false); // Set reverse state accordingly
+    setReverse(false);
   };
 
   return (
@@ -40,18 +42,27 @@ const ReversePage = () => {
           <div className={scss.Reverse_text}>
             <div className={scss.Reverse_about}>
               <Image src={about_image} alt="about_image" />
-              <h2>Best Sellers</h2>
+              <h2>{t("Бестселлеры", "Best Sellers", "Эң көп сатылгандар")}</h2>
             </div>
-            <h1>You Only Reserve Exception</h1>
+            <h1>
+              {t(
+                "Вы резервируете только исключительное",
+                "You Only Reserve Exception",
+                "Сиз гана өзгөчө нерсени резервдешесиз"
+              )}
+            </h1>
             <p>
-              Each location has a menu that`s curated just for them. See what
-              new at your Cafesio and You`ll find Cafesio Covent Carden moments.
+              {t(
+                "В каждом месте представлено меню, составленное специально для него. Узнайте, что нового в вашем Cafesio, и найдете моменты Covent Carden.",
+                "Each location has a menu curated just for them. See what’s new at your Cafesio and find Cafesio Covent Garden moments.",
+                "Ар бир жерде алар үчүн атайын түзүлгөн меню бар. Cafesio жаңылыктарын көрүп, Covent Garden учурларын табыңыз."
+              )}
             </p>
           </div>
           <div className={scss.Reverse_image}>
             <Image
               style={{
-                transform: reverse ? "rotate(180deg)" : "rotate(0deg)", // Use reverse state
+                transform: reverse ? "rotate(180deg)" : "rotate(0deg)",
               }}
               onClick={() => scrollLeft()}
               src={reverse_image_prev}
@@ -63,7 +74,6 @@ const ReversePage = () => {
               <Image src={reverse_image2} alt="reverse_image3" />
               <Image src={reverse_image2} alt="reverse_image4" />
             </div>
-            
             <Image
               onClick={() => scrollRight()}
               src={reverse_image_prev}

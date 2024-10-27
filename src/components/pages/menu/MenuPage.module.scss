@@ -6,14 +6,16 @@
     justify-content: space-between;
     .Menu_text {
       display: flex;
-      align-items: center;
       gap: 30px;
+      align-items: center;
       h2 {
         font-family: "Shalimar", cursive;
         font-size: 30px;
         font-weight: 400;
         color: #ffffff;
-        padding-bottom: 30px;
+      }
+      img {
+        width: 60px;
       }
     }
     .Menu_left {

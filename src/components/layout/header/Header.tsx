@@ -1,3 +1,4 @@
+// Header.tsx
 "use client";
 import Image from "next/image";
 import scss from "./Header.module.scss";
@@ -5,32 +6,27 @@ import header_logo from "@/assets/images/header-logo.svg";
 import Link from "next/link";
 import { CiSearch } from "react-icons/ci";
 import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useLanguageStore } from "@/stores/zustand";
 
 const Header = () => {
   const [isActive, setIsActive] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { language, setLanguage, t } = useLanguageStore();
+
+  const route = useRouter();
+
   const navbar = [
-    {
-      id: 1,
-      href: "/",
-      name: "Interior",
-    },
-    {
-      id: 2,
-      href: "/about",
-      name: "About Us",
-    }, 
-    {
-      id: 3,
-      href: "/menu",
-      name: "Menu",
-    },
-    {
-      id: 4,
-      href: "/contacts",
-      name: "Contacts",
-    },
+    { id: 1, href: "/", name: t("Интерьер", "Interior", "Интерьер") },
+    { id: 2, href: "/about", name: t("О нас", "About Us", "Биз жонундо") },
+    { id: 3, href: "/menu", name: t("Меню", "Menu", "Меню") },
+    { id: 4, href: "/contacts", name: t("Контакты", "Contacts", "Контакт") },
   ];
+
+  const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedLanguage = e.target.value as "ru" | "en" | "kg";
+    setLanguage(selectedLanguage);
+  };
 
   useEffect(() => {
     const handleResize = () => setIsActive(window.innerWidth < 1000);
@@ -47,7 +43,7 @@ const Header = () => {
     <header id={scss.Header}>
       <div className="container">
         <div className={scss.Header}>
-          <Image src={header_logo} alt="Header Logo" />
+          <Image src={header_logo} alt="Логотип Хедера" />
 
           {isActive ? (
             <>
@@ -83,12 +79,13 @@ const Header = () => {
               </nav>
               <div className={scss.Header_buttons}>
                 <button>
-                  <CiSearch /> Search
+                  <CiSearch />
+                  {t("Поиск", "Search", "Издөө")}
                 </button>
-                <select>
-                  <option value="EN">En</option>
-                  <option value="RU">RU</option>
-                  <option value="KG">KG</option>
+                <select value={language} onChange={handleChangeLanguage}>
+                  <option value="en">En</option>
+                  <option value="ru">RU</option>
+                  <option value="kg">KG</option>
                 </select>
               </div>
             </>
