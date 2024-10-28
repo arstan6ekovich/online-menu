@@ -57,7 +57,7 @@
 
     h1 {
       color: #ffffff;
-      width: 100%; 
+      width: 100%;
       font-size: 40px;
       font-weight: 600;
       line-height: 61.36px;
@@ -69,7 +69,7 @@
         font-weight: 500;
         line-height: 24px;
         text-align: left;
-        width: 100%; 
+        width: 100%;
         color: #ef272c;
         padding-top: 30px;
         padding-bottom: 20px;
@@ -80,15 +80,6 @@
         font-weight: 500;
         line-height: 24px;
         color: #ffffff;
-      }
-    }
-
-    .visit_button {
-      h1 {
-        font-family: Spartan;
-        font-size: 12px;
-        font-weight: 600;
-        line-height: 13.44px;
       }
     }
   }
@@ -124,31 +115,144 @@
     }
   }
 
-  
-   
 
-  @media (max-width: 414) {
-    // padding: 20px; 
+  @media (max-width: 912px) {
+    padding: 40px;
+    .visit_text h1 {
+      font-size: 36px;
+    }
+  }
+
+  @media (max-width: 820px) {
+    padding: 30px;
     flex-direction: column;
-    gap: 50px;
+    gap: 30px;
 
-    .visit {
-      flex-direction: column; 
-      align-items: center; 
+    .visit_text h1 {
+      font-size: 32px;
+      text-align: center;
     }
 
-    .visit_text {
+    .visit_image {
+      padding: 30px;
+      width: 100%;
       h1 {
-        font-size: 28px; 
-        text-align: center; 
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .visit_text h1 {
+      font-size: 28px;
+      text-align: center;
+    }
+
+    .visit_image {
+      padding: 30px;
+      width: 100%;
+      h1 {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media (max-width: 414px) {
+    padding: 20px;
+    gap: 20px;
+
+    .visit_text {
+      gap: 15px;
+
+      h1 {
+        font-size: 24px;
+        text-align: center;
+      }
+
+      .visit_restarant h2 {
+        font-size: 26px;
+      }
+
+      .visit_your h2 {
+        font-size: 20px;
+        padding-top: 20px;
+        padding-bottom: 15px;
+      }
+
+      .visit_your h3 {
+        font-size: 16px;
+      }
+
+      .Main_buttons button {
+        width: 180px;
+        height: 38px;
+        font-size: 14px;
       }
     }
 
     .visit_image {
-      width: 80%;
-      padding: 30px; 
+      padding: 20px;
+      gap: 15px;
+
       h1 {
-        font-size: 18px; 
+        font-size: 18px;
+      }
+
+      .telegram h1 {
+        font-size: 32px;
+      }
+    }
+  }
+
+  @media (max-width: 393px) {
+    padding: 20px;
+    .visit_text h1 {
+      font-size: 22px;
+    }
+  }
+
+  @media (max-width: 390px) {
+    padding: 20px;
+    .visit_text h1 {
+      font-size: 21px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    padding: 15px;
+    .visit_text h1 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 360px) {
+    padding: 15px;
+
+    .visit_text h1 {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .visit_image {
+      padding: 15px;
+      h1 {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (max-width: 412px) {
+    padding: 20px;
+
+    .visit_text h1 {
+      font-size: 23px;
+      text-align: center;
+    }
+
+    .visit_image {
+      padding: 25px;
+      h1 {
+        font-size: 18px;
       }
     }
   }

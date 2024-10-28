@@ -8,10 +8,10 @@
 
     .InteriorPage_image {
       display: flex;
-      flex-wrap: wrap;
       align-items: center;
       justify-content: center;
       gap: 20px;
+      overflow-x: auto; /* Прокрутка по горизонтали для маленьких экранов */
 
       img {
         border-radius: 15px;
@@ -31,34 +31,103 @@
     }
   }
 
-  @media (max-width: 380px) {
-    padding: 50px 0;
-    display: flex;
-    align-items: center;
+  @media (max-width: 912px) {
+    padding: 80px 0;
+
+    .InteriorPage_image {
+      gap: 15px;
+    }
+
+    img {
+      max-width: 90%;
+    }
+  }
+
+  @media (max-width: 820px) {
+    padding: 70px 0;
+
+    .InteriorPage_image {
+      gap: 15px;
+    }
+
+    img {
+      max-width: 85%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
     .InteriorPage {
-      display: flex;
       flex-direction: column;
+    }
+
+    .InteriorPage_image {
+      gap: 10px;
+    }
+
+    img {
+      max-width: 80%;
+    }
+  }
+
+  @media (max-width: 500px) {
+    padding: 50px 0;
+
+    .InteriorPage {
+      flex-direction: column; // Устанавливаем вертикальное расположение на маленьких экранах
 
       .InteriorPage_image {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: scroll;
+        display: flex; // Делаем изображения горизонтальными
+        overflow-x: scroll; // Добавляем прокрутку
         gap: 10px;
+        align-items: center;
+        padding: 0 10px;
 
         img {
-          width: 100%;
-          max-width: none;
-          flex-shrink: 0;
-        }
-
-        img:nth-child(2) {
-          margin: 0 auto;
+          width: auto; // Позволяем ширине изображения быть автоматической
+          max-height: 150px; // Ограничиваем максимальную высоту
         }
       }
 
       img {
-        max-width: none;
-        width: 100%;
+        max-width: 80%;
+      }
+    }
+  }
+
+  @media (max-width: 414px) {
+    padding: 40px 0;
+
+    .InteriorPage_image {
+      gap: 8px;
+
+      img {
+        width: auto; // Устанавливаем автоматическую ширину
+      }
+    }
+  }
+
+  @media (max-width: 390px) {
+    padding: 35px 0;
+
+    .InteriorPage_image {
+      gap: 6px;
+
+      img {
+        max-height: 120px; // Ограничиваем максимальную высоту для маленьких экранов
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    padding: 30px 0;
+
+    .InteriorPage_image {
+      gap: 5px;
+
+      img {
+        max-height: 110px; // Ограничиваем максимальную высоту для самых маленьких экранов
       }
     }
   }

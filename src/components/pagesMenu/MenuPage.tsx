@@ -64,45 +64,47 @@ const Menu = () => {
           </div>
           <div className={scss.menuBlocks}>
             {activeProduct && product && (
-              <div className={scss.productContent}>
-                <div key={product.id} className={scss.productCardTwo}>
-                  <img
-                    src={product.imageSrc}
-                    alt={product.name}
-                    className={scss.productImage}
-                  />
-                  <div className={scss.produtTextTwo}>
-                    <div className={scss.iceCreamTwo}>
-                      <h2>{product.name}</h2>
-                      <p>{product.description}</p>
+              <div className={scss.Menu}>
+                <div className={scss.productContent}>
+                  <div key={product.id} className={scss.productCardTwo}>
+                    <img
+                      src={product.imageSrc}
+                      alt={product.name}
+                      className={scss.productImage}
+                    />
+                    <div className={scss.produtTextTwo}>
+                      <div className={scss.iceCreamTwo}>
+                        <h2>{product.name}</h2>
+                        <p>{product.description}</p>
+                      </div>
+                      <h3>${product.price}</h3>
                     </div>
-                    <h3>${product.price}</h3>
                   </div>
-                </div>
-                <div className={scss.extras}>
-                  <h3>Extras</h3>
-                  <hr />
+                  <div className={scss.extras}>
+                    <h3>Extras</h3>
+                    <hr />
 
-                  <div className={scss.charyBlock}>
-                    <p>Cherry</p>
-                    <p>$0.90</p>
-                  </div>
-                  <div className={scss.charyBlock}>
-                    <p>Cherry</p>
-                    <p>$0.90</p>
-                  </div>
-                  <hr />
-                  <h3>Extras</h3>
-                  <div className={scss.charyBlock}>
-                    <p>Cherry</p>
-                    <p>$0.90</p>
-                  </div>
-                  <div className={scss.charyBlock}>
-                    <p>Cherry</p>
-                    <p>$0.90</p>
+                    <div className={scss.charyBlock}>
+                      <p>Cherry</p>
+                      <p>$0.90</p>
+                    </div>
+                    <div className={scss.charyBlock}>
+                      <p>Cherry</p>
+                      <p>$0.90</p>
+                    </div>
+                    <hr />
+                    <h3>Extras</h3>
+                    <div className={scss.charyBlock}>
+                      <p>Cherry</p>
+                      <p>$0.90</p>
+                    </div>
+                    <div className={scss.charyBlock}>
+                      <p>Cherry</p>
+                      <p>$0.90</p>
+                    </div>
                   </div>
                 </div>
-                <p>kmjnbvc</p>
+                  <p className={scss.P}>Similar gueries</p>
               </div>
             )}
             <div className={scss.productList}>
