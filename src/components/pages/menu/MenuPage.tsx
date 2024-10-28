@@ -30,7 +30,13 @@ const MenuPage = () => {
                 "Cafesio даамдарына саякат"
               )}
             </h1>
-            <Image className={scss.img} src={menu_left} alt="Menu Left" width={500} height={300} />
+            <Image
+              className={scss.img}
+              src={menu_left}
+              alt="Menu Left"
+              width={500}
+              height={300}
+            />
           </div>
           <div className={scss.Menu_right}>
             <p>
@@ -40,7 +46,13 @@ const MenuPage = () => {
                 "Сизге жаңы даамдарды ачып, көздүн жоосун алган тамактардан ырахат алыңыз. Бул жерде сиз жылуу атмосфераны, мыкты тейлөөнү жана ар бир конокко көңүл бурууну таба аласыз. Азыр столду заказ кылып, уникалдуу даам ачуу тажрыйбасынан ырахат алыңыз!"
               )}
             </p>
-            <Image className={scss.img}  src={menu_right} alt="Menu Right" width={500} height={300} />
+            <Image
+              className={scss.img}
+              src={menu_right}
+              alt="Menu Right"
+              width={500}
+              height={300}
+            />
           </div>
         </div>
       </div>
