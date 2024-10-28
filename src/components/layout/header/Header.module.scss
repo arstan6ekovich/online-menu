@@ -3,6 +3,7 @@
   position: sticky;
   background: #1b2026;
   z-index: 999;
+  width: 100%;
   top: 0;
   .Header {
     display: flex;
@@ -11,8 +12,9 @@
     .Header_nav {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      width: 500px;
+      justify-content: space-evenly;
+      width: 100%;
+      max-width: 500px;
       a {
         font-size: 16px;
         color: #ffffff;

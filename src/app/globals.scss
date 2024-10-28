@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: "Gill sans", sans-serif;
+  box-sizing: border-box;
 }
 
 a {
@@ -16,14 +17,14 @@ body {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 15px;
 }
 
 .containers {
   width: 100%;
-  max-width: 1150px;
+  max-width: 1180px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 20px 15px;
 }
 
 /* From Uiverse.io by Cevorob */
@@ -86,4 +87,18 @@ body {
   transform: rotate(-45deg);
   top: 28px;
   left: 5px;
+}
+
+
+@media (max-width: 1090px) {
+  .containers {
+    padding: 0 50px;
+    max-width: 950px;
+  }
+}
+
+@media (max-width: 834px) {
+  .containers {
+    padding: 0 15px;
+  }
 }
