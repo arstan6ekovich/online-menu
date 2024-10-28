@@ -231,7 +231,7 @@
     padding: 20px 0;
     .Reverse {
       .Reverse_image {
-
+        
         .gallery {
           max-width: 400px;
           img {
@@ -240,6 +240,7 @@
         }
         img {
           width: 20px;
+
           // &:nth-child(2) {
           //   // width: 100%;
           //   width: 200px;
@@ -305,7 +306,7 @@
           }
         }
         img {
-          width: 20px;
+          width: 48px;
           &:first-child {
             display: none;
           }
@@ -319,10 +320,10 @@
         .Reverse_about {
           gap: 10px;
           img {
-            width: 25px;
+            width: 48px;
           }
           h2 {
-            font-size: 20px;
+            font-size: 28px;
           }
         }
         h1 {
