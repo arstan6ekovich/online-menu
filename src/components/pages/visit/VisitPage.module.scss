@@ -115,7 +115,7 @@
     }
   }
 
-
+  /* Медиазапросы */
   @media (max-width: 912px) {
     padding: 40px;
     .visit_text h1 {
@@ -145,15 +145,6 @@
   @media (max-width: 768px) {
     .visit_text h1 {
       font-size: 28px;
-      text-align: center;
-    }
-
-    .visit_image {
-      padding: 30px;
-      width: 100%;
-      h1 {
-        font-size: 20px;
-      }
     }
   }
 
@@ -166,7 +157,6 @@
 
       h1 {
         font-size: 24px;
-        text-align: center;
       }
 
       .visit_restarant h2 {
@@ -204,56 +194,15 @@
     }
   }
 
-  @media (max-width: 393px) {
-    padding: 20px;
-    .visit_text h1 {
-      font-size: 22px;
-    }
-  }
-
-  @media (max-width: 390px) {
-    padding: 20px;
-    .visit_text h1 {
-      font-size: 21px;
-    }
-  }
-
-  @media (max-width: 375px) {
-    padding: 15px;
-    .visit_text h1 {
-      font-size: 20px;
-    }
-  }
-
   @media (max-width: 360px) {
     padding: 15px;
 
     .visit_text h1 {
       font-size: 18px;
-      text-align: center;
     }
 
-    .visit_image {
-      padding: 15px;
-      h1 {
-        font-size: 16px;
-      }
-    }
-  }
-
-  @media (max-width: 412px) {
-    padding: 20px;
-
-    .visit_text h1 {
-      font-size: 23px;
-      text-align: center;
-    }
-
-    .visit_image {
-      padding: 25px;
-      h1 {
-        font-size: 18px;
-      }
+    .visit_image h1 {
+      font-size: 16px;
     }
   }
 }

@@ -11,12 +11,8 @@
       align-items: center;
       justify-content: center;
       gap: 20px;
-<<<<<<< HEAD
-      overflow-x: auto; /* Прокрутка по горизонтали для маленьких экранов */
+      overflow-x: auto;
 
-=======
-      width: 700px;
->>>>>>> c4f89eabb8fbac7ad59470ea9dd96f87d825dd23
       img {
         border-radius: 15px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -79,18 +75,18 @@
     padding: 50px 0;
 
     .InteriorPage {
-      flex-direction: column; // Устанавливаем вертикальное расположение на маленьких экранах
+      flex-direction: column;
 
       .InteriorPage_image {
-        display: flex; // Делаем изображения горизонтальными
-        overflow-x: scroll; // Добавляем прокрутку
+        display: flex; 
+        overflow-x: scroll; 
         gap: 10px;
         align-items: center;
         padding: 0 10px;
 
         img {
-          width: auto; // Позволяем ширине изображения быть автоматической
-          max-height: 150px; // Ограничиваем максимальную высоту
+          width: auto;
+          max-height: 150px; 
         }
       }
 
@@ -107,7 +103,7 @@
       gap: 8px;
 
       img {
-        width: auto; // Устанавливаем автоматическую ширину
+        width: auto; 
       }
     }
   }
@@ -119,7 +115,7 @@
       gap: 6px;
 
       img {
-        max-height: 120px; // Ограничиваем максимальную высоту для маленьких экранов
+        max-height: 120px;
       }
     }
   }
@@ -131,7 +127,7 @@
       gap: 5px;
 
       img {
-        max-height: 110px; // Ограничиваем максимальную высоту для самых маленьких экранов
+        max-height: 110px; 
       }
     }
   }
