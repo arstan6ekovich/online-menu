@@ -3,7 +3,9 @@
   position: sticky;
   background: #1b2026;
   z-index: 999;
+  border-bottom: 1px solid #fff;
   width: 100%;
+  // position: relative;
   top: 0;
   .Header {
     display: flex;
@@ -12,9 +14,8 @@
     .Header_nav {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      width: 100%;
-      max-width: 500px;
+      justify-content: space-between;
+      width: 500px;
       a {
         font-size: 16px;
         color: #ffffff;
@@ -50,8 +51,99 @@
         outline: none;
       }
     }
+    .active {
+      text-decoration: underline;
+      color: white;
+    }
+    .lang {
+      display: flex;
+      gap: 20px;
+      color: rgb(209, 207, 207);
+      text-transform: uppercase;
+      font-size: 20px;
+    }
     .Header_nav_mobile {
       position: absolute;
+      padding-left: 70px;
+      z-index: 10 !important;
+      width: 100%;
+      max-width: 400px;
+      flex-direction: column;
+      display: flex;
+      height: 400px;
+      right: 0;
+      justify-content: space-evenly;
+      top: 82px;
+      align-items: flex-start;
+      background: #1b2026;
+      font-size: 20px;
+      font-weight: 700;
+      animation: an 1s ease 1;
+    a {
+      color: white;
+    }
+
+    }
+
+    @keyframes an {
+      0% {
+        top: -100px;
+        height: 0;
+      }
+      100% {
+        top: 80px;
+        height: 400px;
+      }
+
     }
   }
+
+  .BlockSearchtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    input {
+      width: 335px;
+      height: 37px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+    button {
+      position: absolute;
+      right: -150px;
+      top: 20px;
+      border: none;
+      background: 0;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .results {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 5px;
+    padding: 10px;
+    height: 300px;
+    margin-top: -300px;
+    .resultItem {
+      display: flex;
+      gap: 5px;
+      padding: 10px;
+      background: rgb(255, 255, 255);
+      border-radius: 5px;
+      .Search_img {
+        width: 100px;
+        height: 100%;
+        border-radius: 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  
 }

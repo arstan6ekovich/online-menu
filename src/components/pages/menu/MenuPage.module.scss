@@ -154,30 +154,24 @@
   #Menu {
     .Menu {
       position: relative;
-      padding-bottom: 600px;
+      padding-bottom: 0px;
       flex-direction: column;
       align-items: flex-start;
 
       .img {
-        height: auto;
-        left: 0;
-        margin-bottom: 10px;
-        position: absolute;
         max-width: 100%;
-        transform: translate(0px,200px);
-        // bottom: 0;
-
+        &:last-child {
+          margin: 0;
+        }
       }
-      .img:first-child {
-        transform: translate(0px,400px);
 
-      }
       .Menu_left {
         width: 100%;
         h1 {
           max-width: 100% ;
           font-size: 30px;
           padding: 0;
+          padding-bottom: 250px;
         }
         .Menu_text {
           padding: 40px 0;
@@ -185,6 +179,9 @@
       }
       .Menu_right {
         p {
+          left: 0;
+          top: 160px;
+          position: absolute;
           max-width: 100%;
         }
       }

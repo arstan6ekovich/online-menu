@@ -62,7 +62,7 @@ const ReversePage = () => {
           <div className={scss.Reverse_image}>
             <Image
               style={{
-                transform: reverse ? "rotate(180deg)" : "rotate(0deg)",
+                transform: reverse ? "rotate(180deg)" : "rotate(180deg)",
               }}
               onClick={() => scrollLeft()}
               src={reverse_image_prev}
