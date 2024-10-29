@@ -23,6 +23,10 @@ const Header = () => {
     { id: 4, href: "/contacts", name: t("Контакты", "Contacts", "Контакт") },
   ];
 
+  const handleClickChangeLanguage = (selectedLanguage: "ru" | "en" | "kg") => {
+    setLanguage(selectedLanguage);
+  };
+
   const handleChangeLanguage = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const selectedLanguage = e.target.value as "ru" | "en" | "kg";
     setLanguage(selectedLanguage);
@@ -65,6 +69,27 @@ const Header = () => {
                       {item.name}
                     </Link>
                   ))}
+                  <div className={scss.lang}>
+                    <span
+                      onClick={() => handleClickChangeLanguage("en")}
+                      className={language === "en" ? scss.active : ""}
+                    >
+                      En
+                    </span>
+                    <span
+                      onClick={() => handleClickChangeLanguage("ru")}
+                      className={language === "ru" ? scss.active : ""}
+                    >
+                      RU
+                    </span>
+                    <span
+                      onClick={() => handleClickChangeLanguage("kg")}
+                      className={language === "kg" ? scss.active : ""}
+                    >
+                      KG
+                    </span>
+                  </div>
+
                 </nav>
               )}
             </>
