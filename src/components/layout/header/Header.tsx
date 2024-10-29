@@ -65,7 +65,7 @@ const Header = () => {
 
   const handleMenuToggle = () => setIsOpen((prevState) => !prevState);
 
-  const categories: MenuCategory[] = [
+const categories: MenuCategory[] = [
     "Desserts",
     "Hot Drinks",
     "Cold Drinks",
@@ -89,7 +89,6 @@ const Header = () => {
         },
         image: "/images/шоколад.png",
       },
-      // Добавьте другие элементы меню
     ],
     "Hot Drinks": [
       {
@@ -204,40 +203,31 @@ const Header = () => {
               {isOpen && (
                 <nav className={scss.Header_nav_mobile}>
                   {navbar.map((item) => (
-                    <Link onClick={handleMenuToggle} href={item.href} key={item.id}>
+                    <Link href={item.href} key={item.id}>
                       {item.name}
                     </Link>
                   ))}
-                  <div className={scss.lang}>
+
+<div className={scss.lang}>
                     <span
-                      onClick={() => {
-                        handleClickChangeLanguage("en")
-                        handleMenuToggle()
-                      }}
+                      onClick={() => handleClickChangeLanguage("en")}
                       className={language === "en" ? scss.active : ""}
                     >
                       En
                     </span>
                     <span
-                      onClick={() => {
-                        handleClickChangeLanguage("ru")
-                        handleMenuToggle()
-                      }}
+                      onClick={() => handleClickChangeLanguage("ru")}
                       className={language === "ru" ? scss.active : ""}
                     >
                       RU
                     </span>
                     <span
-                      onClick={() => {
-                        handleMenuToggle()
-                        handleClickChangeLanguage("kg")
-                      }}
+                      onClick={() => handleClickChangeLanguage("kg")}
                       className={language === "kg" ? scss.active : ""}
                     >
                       KG
                     </span>
                   </div>
-
                 </nav>
               )}
             </>
@@ -269,28 +259,21 @@ const Header = () => {
           style={{
             display: search ? "flex" : "none",
             flexDirection: "column",
-            background: "black",
+            background: "rgba(255, 255, 255, 0.096)",
             width: "700px",
             position: "absolute",
             top: "200px",
+            height: "400px",
             right: "27%",
             borderRadius: "20px",
           }}
         >
+          <input
+            type="text"
+            onChange={handleSearchChange}
+            placeholder="  Search"
+          />
           <div className={scss.BlockSearchtext}>
-            <div className="group">
-              <svg className="icon" aria-hidden="true" viewBox="0 0 24 24">
-                <g>
-                  <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                </g>
-              </svg>
-              <input
-                placeholder="Search"
-                type="search"
-                className="input"
-                onChange={handleSearchChange}
-              />
-            </div>
             <button onClick={() => setSearch(false)}>
               <ImCancelCircle color="white" />
             </button>
@@ -319,4 +302,4 @@ const Header = () => {
   );
 };
 
-export default Heade
+export default Header;
