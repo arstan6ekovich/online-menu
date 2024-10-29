@@ -15,37 +15,44 @@ const titleData = [
   {
     id: 0,
     title: { en: "Desserts", ru: "Десерты", kg: "Таттуулар" },
-    category: "Desserts"
+    category: "Desserts",
   },
   {
     id: 1,
     title: { en: "Hot Drinks", ru: "Горячие напитки", kg: "Ысык суусундуктар" },
-    category: "Hot Drinks"
-
+    category: "Hot Drinks",
   },
   {
     id: 2,
-    title: { en: "Cold Drinks", ru: "Холодные напитки", kg: "Муздак суусундуктар" },
-    category: "Cold Drinks"
-
+    title: {
+      en: "Cold Drinks",
+      ru: "Холодные напитки",
+      kg: "Муздак суусундуктар",
+    },
+    category: "Cold Drinks",
   },
   {
     id: 3,
-    title: { en: "National Foods", ru: "Национальные блюда", kg: "Улуттук тамактар" },
-    category: "National Foods"
-
+    title: {
+      en: "National Foods",
+      ru: "Национальные блюда",
+      kg: "Улуттук тамактар",
+    },
+    category: "National Foods",
   },
   {
     id: 4,
-    title: { en: "Eastern Cuisine", ru: "Восточная кухня", kg: "Чыгыш ашканасы" },
-    category: "Eastern Cuisine"
-
+    title: {
+      en: "Eastern Cuisine",
+      ru: "Восточная кухня",
+      kg: "Чыгыш ашканасы",
+    },
+    category: "Eastern Cuisine",
   },
   {
     id: 5,
     title: { en: "Fast Foods", ru: "Фастфуд", kg: "Тез тамактануулар" },
-    category: "Fast Foods"
-
+    category: "Fast Foods",
   },
 ];
 
@@ -63,7 +70,11 @@ const itemData = [
   },
   {
     id: 1,
-    title: { en: "Burger & Pasta", ru: "Бургер и паста", kg: "Бургер жана паста" },
+    title: {
+      en: "Burger & Pasta",
+      ru: "Бургер и паста",
+      kg: "Бургер жана паста",
+    },
     price: 24,
     descr: {
       en: "A delightful combination of burger and pasta for true food lovers.",
@@ -96,7 +107,11 @@ const itemData = [
   },
   {
     id: 4,
-    title: { en: "Chocolate Mousse", ru: "Шоколадный мусс", kg: "Шоколад муссу" },
+    title: {
+      en: "Chocolate Mousse",
+      ru: "Шоколадный мусс",
+      kg: "Шоколад муссу",
+    },
     price: 20,
     descr: {
       en: "A light and airy chocolate mousse for a sweet finish.",
@@ -465,7 +480,11 @@ const itemData = [
   },
   {
     id: 37,
-    title: { en: "Korean BBQ", ru: "Корейское барбекю", kg: "Корейская барбекю" },
+    title: {
+      en: "Korean BBQ",
+      ru: "Корейское барбекю",
+      kg: "Корейская барбекю",
+    },
     price: 20,
     descr: {
       en: "Grilled meats served with Korean sauces.",
@@ -498,17 +517,19 @@ const itemData = [
   },
 ];
 
-
-
 const QualityPage = () => {
   const { t } = useLanguageStore();
-  const [selectedCategory, setSelectedCategory] = useState(titleData[0].category);
+  const [selectedCategory, setSelectedCategory] = useState(
+    titleData[0].category
+  );
 
+  const filteredProducts = itemData.filter(
+    (el) => el.category === selectedCategory
+  );
+  const changedFilterProducts = (category: string) => {
+    setSelectedCategory(category);
+  };
 
-  const filteredProducts = itemData.filter(el => el.category === selectedCategory)
-  const changedFilterProducts = (category) => {
-    setSelectedCategory(category)
-  }
   return (
     <section id={scss.Quality}>
       <div className="containers">
@@ -528,29 +549,26 @@ const QualityPage = () => {
         </div>
         <div className={scss.Quality}>
           <div className={scss.Quality_left}>
-            {
-              titleData.map(title => (
-                <h2 
-                onClick= {() => changedFilterProducts(title.category)}
-                key={title.id} >{t(title.title.ru, title.title.en, title.title.kg)}</h2>
-              ))
-            }
+            {titleData.map((title) => (
+              <h2
+                onClick={() => changedFilterProducts(title.category)}
+                key={title.id}
+              >
+                {t(title.title.ru, title.title.en, title.title.kg)}
+              </h2>
+            ))}
           </div>
           <div className={scss.Qualtiy_mar4ik}>
             {filteredProducts.map((product, index) => (
               <div className={scss.Quality_right} key={index}>
                 <div className={scss.Quality_main}>
-                  <h3>{t(product.title.ru, product.title.en, product.title.kg)}</h3>
+                  <h3>
+                    {t(product.title.ru, product.title.en, product.title.kg)}
+                  </h3>
                   <Image src={line_reverse} alt="line_reverse" />
                   <h2>${product.price}</h2>
                 </div>
-                <p>
-                  {t(
-                    product.descr.ru,
-                    product.descr.en,
-                    product.descr.kg,
-                  )}
-                </p>
+                <p>{t(product.descr.ru, product.descr.en, product.descr.kg)}</p>
                 <Link href={"/"}>
                   {t("Заказать", "Order Now", "Буйрутма берүү")}
                 </Link>
