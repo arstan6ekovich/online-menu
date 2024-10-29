@@ -83,11 +83,11 @@ const Menu = () => {
               <div className={scss.Menu}>
                 <div className={scss.productContent}>
                   <div key={product.id} className={scss.productCardTwo}>
-                    <img
-                      src=""
+                    <Image
+                      src={product.imageSrc} // Используем Image для оптимизации
                       alt={product.name}
                       className={scss.productImage}
-                      width={300} // Укажите подходящие значения для Image
+                      width={300}
                       height={300}
                     />
                     <div className={scss.produtTextTwo}>
