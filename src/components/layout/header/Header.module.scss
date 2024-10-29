@@ -5,6 +5,7 @@
   z-index: 999;
   border-bottom: 1px solid #fff;
   width: 100%;
+  // position: relative;
   top: 0;
   .Header {
     display: flex;
@@ -13,9 +14,8 @@
     .Header_nav {
       display: flex;
       align-items: center;
-      justify-content: space-evenly;
-      width: 100%;
-      max-width: 500px;
+      justify-content: space-between;
+      width: 500px;
       a {
         font-size: 16px;
         color: #ffffff;
@@ -95,6 +95,51 @@
         height: 400px;
       }
 
+    }
+  }
+
+  .BlockSearchtext {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    input {
+      width: 335px;
+      height: 37px;
+      border-radius: 4px;
+      z-index: 1;
+    }
+    button {
+      position: absolute;
+      right: -150px;
+      top: 20px;
+      border: none;
+      background: 0;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+  .results {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    gap: 5px;
+    padding: 10px;
+    height: 300px;
+    margin-top: -300px;
+    .resultItem {
+      display: flex;
+      gap: 5px;
+      padding: 10px;
+      background: rgb(255, 255, 255);
+      border-radius: 5px;
+      .Search_img {
+        width: 100px;
+        height: 100%;
+        border-radius: 3px;
+      }
     }
   }
 }

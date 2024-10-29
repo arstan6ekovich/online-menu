@@ -1,12 +1,13 @@
 #Main {
-  background: url("../../../assets/images/Main_image.png") no-repeat center/cover;
-  
+  background: url("../../../assets/images/Main_image.png") no-repeat
+    center/cover;
+
   .Main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    min-height: 73vh;
+    min-height: 80vh;
     gap: 30px;
     position: relative;
 
@@ -67,7 +68,8 @@
     align-items: center;
     justify-content: space-between;
 
-    .Main_left, .Main_right {
+    .Main_left,
+    .Main_right {
       display: flex;
       align-items: center;
       gap: 30px;
@@ -121,16 +123,16 @@
     }
 
     .Main_bottom {
-
-
-      .Main_left, .Main_right {
+      .Main_left,
+      .Main_right {
         gap: 20px;
         flex-direction: column;
         align-items: flex-start;
         img {
           display: none;
         }
-        h2, p {
+        h2,
+        p {
           font-size: 12px;
         }
       }
@@ -165,10 +167,12 @@
     }
 
     .Main_bottom {
-      .Main_left, .Main_right {
+      .Main_left,
+      .Main_right {
         gap: 15px;
 
-        h2, p {
+        h2,
+        p {
           font-size: 10px;
         }
       }
