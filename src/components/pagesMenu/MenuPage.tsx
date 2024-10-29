@@ -2,17 +2,19 @@
 import { useMemo, useState } from "react";
 import scss from "./MenuPage.module.scss";
 import { products } from "@/Products";
+import { useLanguageStore } from "@/stores/zustand"; 
 
 const Menu = () => {
+  const { t } = useLanguageStore(); 
   const [activeItem, setActiveItem] = useState("desserts-001");
   const [loading, setLoading] = useState(false);
   const items = [
-    { id: "desserts-001", title: "Desserts" },
-    { id: "hot-drinks-002", title: "Hot Drinks" },
-    { id: "cold-drinks-003", title: "Cold Drinks" },
-    { id: "national-foods-004", title: "National Foods" },
-    { id: "eastern-cuisine-005", title: "Eastern Cuisine" },
-    { id: "fast-foods-006", title: "Fast Foods" },
+    { id: "desserts-001", title: t("Десерты", "Desserts", "Десерттер") },
+    { id: "hot-drinks-002", title: t("Горячие напитки", "Hot Drinks", "Ысык ичимдиктер") },
+    { id: "cold-drinks-003", title: t("Холодные напитки", "Cold Drinks", "Суук ичимдиктер") },
+    { id: "national-foods-004", title: t("Национальные блюда", "National Foods", "Улуттук тамактар") },
+    { id: "eastern-cuisine-005", title: t("Восточная кухня", "Eastern Cuisine", "Чыгыш ашканасы") },
+    { id: "fast-foods-006", title: t("Фаст-фуды", "Fast Foods", "Фаст-фуд") },
   ];
 
   const [activeProduct, setActiveProduct] = useState<null | string>(null);
@@ -37,6 +39,7 @@ const Menu = () => {
       behavior: "smooth",
     });
   };
+  
   return (
     <div id={scss.menuPage}>
       <div className="container">
@@ -81,30 +84,30 @@ const Menu = () => {
                     </div>
                   </div>
                   <div className={scss.extras}>
-                    <h3>Extras</h3>
+                    <h3>{t("Дополнения", "Extras", "Кошумча")}</h3>
                     <hr />
 
                     <div className={scss.charyBlock}>
-                      <p>Cherry</p>
+                      <p>{t("Вишня", "Cherry", "Чоң көйкөс")}</p>
                       <p>$0.90</p>
                     </div>
                     <div className={scss.charyBlock}>
-                      <p>Cherry</p>
+                      <p>{t("Вишня", "Cherry", "Чоң көйкөс")}</p>
                       <p>$0.90</p>
                     </div>
                     <hr />
-                    <h3>Extras</h3>
+                    <h3>{t("Дополнения", "Extras", "Кошумча")}</h3>
                     <div className={scss.charyBlock}>
-                      <p>Cherry</p>
+                      <p>{t("Вишня", "Cherry", "Чоң көйкөс")}</p>
                       <p>$0.90</p>
                     </div>
                     <div className={scss.charyBlock}>
-                      <p>Cherry</p>
+                      <p>{t("Вишня", "Cherry", "Чоң көйкөс")}</p>
                       <p>$0.90</p>
                     </div>
                   </div>
                 </div>
-                  <p className={scss.P}>Similar gueries</p>
+                  <p className={scss.P}>{t("Похожие товары", "Similar products", "Ушундай товарлар")}</p>
               </div>
             )}
             <div className={scss.productList}>
