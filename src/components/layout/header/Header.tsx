@@ -204,25 +204,34 @@ const Header = () => {
               {isOpen && (
                 <nav className={scss.Header_nav_mobile}>
                   {navbar.map((item) => (
-                    <Link href={item.href} key={item.id}>
+                    <Link onClick={handleMenuToggle} href={item.href} key={item.id}>
                       {item.name}
                     </Link>
                   ))}
                   <div className={scss.lang}>
                     <span
-                      onClick={() => handleClickChangeLanguage("en")}
+                      onClick={() => {
+                        handleClickChangeLanguage("en")
+                        handleMenuToggle()
+                      }}
                       className={language === "en" ? scss.active : ""}
                     >
                       En
                     </span>
                     <span
-                      onClick={() => handleClickChangeLanguage("ru")}
+                      onClick={() => {
+                        handleClickChangeLanguage("ru")
+                        handleMenuToggle()
+                      }}
                       className={language === "ru" ? scss.active : ""}
                     >
                       RU
                     </span>
                     <span
-                      onClick={() => handleClickChangeLanguage("kg")}
+                      onClick={() => {
+                        handleMenuToggle()
+                        handleClickChangeLanguage("kg")
+                      }}
                       className={language === "kg" ? scss.active : ""}
                     >
                       KG

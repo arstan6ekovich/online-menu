@@ -51,6 +51,12 @@
         outline: none;
       }
     }
+    select {
+      option {
+
+        background-color: #1b2026;
+      }
+    }
     .active {
       text-decoration: underline;
       color: white;
